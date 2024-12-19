@@ -106,10 +106,11 @@ const password = ref('')
 const showPassword = ref(false)
 const isLoading = ref(false)
 
-const { signUp } = useClerk()
+const { signIn } = useSignIn()
+const { signUp } = useSignUp()
 
 const signInWithGitHub = () => {
-  signUp.authenticateWithRedirect({
+  signIn.value?.authenticateWithRedirect({
     strategy: 'oauth_github',
     redirectUrl: '/',
     redirectUrlComplete: '/'
@@ -117,7 +118,7 @@ const signInWithGitHub = () => {
 }
 
 const signInWithGoogle = () => {
-  signUp.authenticateWithRedirect({
+  signIn.value?.authenticateWithRedirect({
     strategy: 'oauth_google',
     redirectUrl: '/',
     redirectUrlComplete: '/'
@@ -129,7 +130,7 @@ const handleSignUp = async () => {
 
   try {
     isLoading.value = true
-    await signUp.create({
+    await signUp.value?.create({
       firstName: firstName.value,
       lastName: lastName.value,
       emailAddress: emailAddress.value,

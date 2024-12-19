@@ -69,6 +69,7 @@ interface NavigationItem {
 }
 
 const { isSignedIn } = useAuth()
+const { user } = useUser()
 const colorMode = useColorMode()
 
 const navigationItems: NavigationItem[] = [
