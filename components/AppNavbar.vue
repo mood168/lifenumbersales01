@@ -1,10 +1,10 @@
 <template>
   <div>
     <template v-if="isSignedIn">
-      <!-- 漢堡選單按鈕 - 僅在手機版顯示 -->
+      <!-- 漢堡選單按鈕 - 調整位置 -->
       <button 
         @click="isMenuOpen = !isMenuOpen"
-        class="fixed top-4 left-4 z-50 lg:hidden">
+        class="fixed top-5 right-4 z-50 lg:hidden">
         <div class="w-6 h-5 flex flex-col justify-between">
           <span class="w-full h-0.5 bg-gray-800 dark:bg-white"></span>
           <span class="w-full h-0.5 bg-gray-800 dark:bg-white"></span>
@@ -18,13 +18,13 @@
           'fixed left-0 top-0 h-full bg-gray-900 text-white z-40 transition-transform duration-300',
           'w-64',
           isMenuOpen ? 'translate-x-0' : '-translate-x-full',
-          'lg:translate-x-0' // 桌面版總是顯示
+          'lg:translate-x-0'
         ]"
       >
-        <!-- 原有的導航內容 -->
+        <!-- 網站標題 -->
         <div class="p-6 border-b border-gray-700">
-          <NuxtLink to="/" class="text-2xl font-bold">
-            紫微問數
+          <NuxtLink to="/" class="text-2xl font-bold block pt-2">
+            紫喬問數
           </NuxtLink>
         </div>
 

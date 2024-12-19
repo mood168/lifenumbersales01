@@ -2,7 +2,7 @@
   <div class="min-h-screen p-8">
     <div class="container mx-auto">
       <header class="text-center mb-12">
-        <h1 class="text-4xl font-bold text-white mb-4 drop-shadow-lg">紫微問數❤靈運指掌</h1>
+        <h1 class="text-4xl font-bold text-white mb-4 drop-shadow-lg">紫喬問數❤靈運指掌</h1>
         <p class="text-xl text-white/90 drop-shadow">探索您的天賦與潛能</p>
       </header>
 

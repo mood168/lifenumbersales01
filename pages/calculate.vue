@@ -3,7 +3,7 @@
     <div class="w-full max-w-md">
       <div class="bg-peach-100 rounded-3xl p-8 backdrop-blur-sm bg-white/20">
         <div class="text-center mb-8">
-          <h1 class="text-2xl font-bold mb-2">紫微問數❤靈運指掌</h1>
+          <h1 class="text-2xl font-bold mb-2">紫喬問數❤靈運指掌</h1>
         </div>
 
         <form @submit.prevent="calculateLifePathNumber" class="space-y-6">
