@@ -1,16 +1,33 @@
 <template>
   <div>
-    <!-- 只在登入時顯示導航欄 -->
     <template v-if="isSignedIn">
-      <nav class="fixed left-0 top-0 h-full w-64 bg-gray-900 text-white z-50">
-        <!-- Logo -->
+      <!-- 漢堡選單按鈕 - 僅在手機版顯示 -->
+      <button 
+        @click="isMenuOpen = !isMenuOpen"
+        class="fixed top-4 left-4 z-50 lg:hidden">
+        <div class="w-6 h-5 flex flex-col justify-between">
+          <span class="w-full h-0.5 bg-gray-800 dark:bg-white"></span>
+          <span class="w-full h-0.5 bg-gray-800 dark:bg-white"></span>
+          <span class="w-full h-0.5 bg-gray-800 dark:bg-white"></span>
+        </div>
+      </button>
+
+      <!-- 側邊導航欄 -->
+      <nav 
+        :class="[
+          'fixed left-0 top-0 h-full bg-gray-900 text-white z-40 transition-transform duration-300',
+          'w-64',
+          isMenuOpen ? 'translate-x-0' : '-translate-x-full',
+          'lg:translate-x-0' // 桌面版總是顯示
+        ]"
+      >
+        <!-- 原有的導航內容 -->
         <div class="p-6 border-b border-gray-700">
           <NuxtLink to="/" class="text-2xl font-bold">
             紫微問數
           </NuxtLink>
         </div>
 
-        <!-- Navigation Links -->
         <div class="mt-6">
           <NuxtLink 
             v-for="item in navigationItems" 
@@ -47,13 +64,17 @@
         </div>
       </nav>
 
-      <!-- Main Content Wrapper with margin -->
-      <div class="ml-64">
+      <!-- 主內容區域 -->
+      <div 
+        :class="[
+          'transition-margin duration-300',
+          'lg:ml-64' // 桌面版保持間距
+        ]"
+      >
         <slot />
       </div>
     </template>
 
-    <!-- 未登入時不顯示導航欄，內容佔滿整個寬度 -->
     <template v-else>
       <div class="w-full">
         <slot />
@@ -71,6 +92,7 @@ interface NavigationItem {
 const { isSignedIn } = useAuth()
 const { user } = useUser()
 const colorMode = useColorMode()
+const isMenuOpen = ref(false)
 
 const navigationItems: NavigationItem[] = [
   { name: '生命靈數計算', path: '/calculate' },

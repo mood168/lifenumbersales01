@@ -3,9 +3,9 @@
     <div class="w-full max-w-md space-y-8">
       <div class="bg-white rounded-3xl p-8 shadow-lg">
         <div class="text-center mb-6">
-          <h2 class="text-2xl font-bold text-gray-900">建立您的帳號</h2>
+          <h2 class="text-2xl font-bold text-gray-900">Create your account</h2>
           <p class="mt-2 text-gray-600">
-            開始探索生命靈數的奧秘
+            to continue to Clerk
           </p>
         </div>
 
