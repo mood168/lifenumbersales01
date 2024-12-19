@@ -6,7 +6,7 @@
       <!-- 頁面標題 -->
       <div class="text-center mb-12">
         <h1 class="text-3xl font-bold text-white mb-4">選擇您的訂閱方案</h1>
-        <p class="text-white/80">解鎖完整的紫微問數功能，開啟您的命理之旅</p>
+        <p class="text-white/80">解鎖完整的紫喬問數功能，開啟您的命理之旅</p>
       </div>
 
       <!-- 價格方案卡片 -->
@@ -120,7 +120,7 @@ definePageMeta({
 const faqs = [
   {
     question: '如何選擇適合的方案？',
-    answer: '建議您可以從基礎方案開始體驗，了解自己的需求後再考慮升級。我們提供彈性的方案變更，您可以隨時升級或降級您的訂閱���'
+    answer: '建議您可以從基礎方案開始體驗，了解自己的需求後再考慮升級。我們提供彈性的方案變更，您可以隨時升級或降級您的訂閱服務'
   },
   {
     question: '可以隨時取消訂閱嗎？',

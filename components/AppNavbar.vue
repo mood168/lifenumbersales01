@@ -24,7 +24,7 @@
         <!-- 原有的導航內容 -->
         <div class="p-6 border-b border-gray-700">
           <NuxtLink to="/" class="text-2xl font-bold">
-            紫微問數
+            紫喬問數
           </NuxtLink>
         </div>
 
