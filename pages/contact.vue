@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-orange-600 via-orange-500 to-yellow-400">
+  <div class="min-h-screen bg-cover bg-center" :style="backgroundStyle">
     <div class="h-[50px]"></div>
     
     <div class="container mx-auto px-4 py-8">
@@ -63,4 +63,8 @@
 definePageMeta({
   middleware: ['auth']
 })
+
+const backgroundStyle = {
+  backgroundImage: 'url(/images/background.jpg)'
+}
 </script> 

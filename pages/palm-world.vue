@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-orange-600 via-orange-500 to-yellow-400">
+  <div class="min-h-screen bg-cover bg-center" :style="backgroundStyle">
     <div class="h-[50px]"></div>
     
     <!-- 頂部搜尋區域 -->
@@ -62,6 +62,10 @@ const filteredItems = computed(() => {
     item.title.toLowerCase().includes(searchQuery.value.toLowerCase())
   )
 })
+
+const backgroundStyle = {
+  backgroundImage: 'url(/images/background.jpg)'
+}
 </script>
 
 <style scoped>
