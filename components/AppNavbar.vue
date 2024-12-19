@@ -1,7 +1,7 @@
 <template>
   <div>
     <template v-if="isSignedIn">
-      <!-- 漢堡選單按鈕 - 調整位置 -->
+      <!-- 漢堡選單按鈕 - 僅在手機版顯示 -->
       <button 
         @click="isMenuOpen = !isMenuOpen"
         class="fixed top-5 right-4 z-50 lg:hidden">
@@ -16,15 +16,15 @@
       <nav 
         :class="[
           'fixed left-0 top-0 h-full bg-gray-900 text-white z-40 transition-transform duration-300',
-          'w-64',
+          'w-[350px]',
           isMenuOpen ? 'translate-x-0' : '-translate-x-full',
-          'lg:translate-x-0'
+          'lg:translate-x-0' // 桌面版總是顯示
         ]"
       >
-        <!-- 網站標題 -->
+        <!-- 原有的導航內容 -->
         <div class="p-6 border-b border-gray-700">
-          <NuxtLink to="/" class="text-2xl font-bold block pt-2">
-            紫喬問數
+          <NuxtLink to="/" class="text-2xl font-bold">
+            紫微問數
           </NuxtLink>
         </div>
 
@@ -68,7 +68,7 @@
       <div 
         :class="[
           'transition-margin duration-300',
-          'lg:ml-64' // 桌面版保持間距
+          'lg:ml-[350px]'
         ]"
       >
         <slot />
